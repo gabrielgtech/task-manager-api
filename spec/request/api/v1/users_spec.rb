@@ -24,7 +24,7 @@ RSpec.describe 'Users API', type: :request do
       end
     end
     context "when the user does not exist" do
-      
+
         let(:user_id) { 10000 }
         it "returns status code 404" do
 
