@@ -31,6 +31,12 @@ respond_to :json
       end
     end
 
+    def destroy
+      #code
+      user = User.find(params[:id])
+      user.destroy
+      head 204
+    end
     private
     def user_params
       params.require(:user).permit(:name, :email, :password, :password_confirmation)
